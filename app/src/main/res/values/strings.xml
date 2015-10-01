@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IconFontDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="decribe">矢量字体图标：\n可以灵活设置字体大小颜色，图形伸缩无变形。适合单色的图标，复用性高。\n下面的例子分别展示使用原生TextView和扩展的IconFontTextView如何使用矢量字体。</string>
+    <string name="decribe_iconfont">下面是一个自定义字体view[IconFontTextView]，直接在layout里面配置即可:</string>
+
+</resources>

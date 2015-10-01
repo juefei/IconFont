@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.tmall.iconfont"
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.0.0'
+}
+
+apply plugin: "maven"
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.project {
+                name = 'IconFont'
+                packaging = 'aar'
+            }
+            pom.groupId = 'com.android.icon'
+            pom.artifactId = 'iconfont'
+            pom.version = '1.0.0-SNAPSHOT'
+            if(pom.version.toLowerCase().contains('snapshot')) {
+                repository(url: 'http://xxx.xxx.com/repositories/snapshots/') {
+                    authentication(userName: 'snapshotsAdmin', password: '123456')
+                }
+            } else {
+                repository(url: 'http://xxx.xxx.com/repositories/releases/') {
+                    authentication(userName: 'admin', password: 'screct')
+                }
+            }
+        }
+    }
+}
