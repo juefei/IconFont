@@ -18,7 +18,7 @@ TextView替代ImageView，规避使用bitmap，内存上也大大降低了。
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), "font/iconfont.ttf");     
         TextView tvIcon1 = (TextView)findViewById(R.id.action_icon1);   
         tvIcon1.setTypeface(myTypeface);   
-        tvIcon1.setText(Html.fromHtml("&#x3626;"));  // iconfont编码，参照iconfont ttf文件
+        tvIcon1.setText(Html.fromHtml("\&#x3626;"));  // iconfont编码，参照assets/iconfont.ttf文件
         
 * 使用扩展控件IconFontTextView方式(分为两种):  
 
@@ -34,4 +34,4 @@ TextView替代ImageView，规避使用bitmap，内存上也大大降低了。
         &emsp;&emsp;android:layout_height="wrap_content"     
         &emsp;&emsp;android:textSize="30sp"     
         &emsp;&emsp;android:textColor="#999999"      
-        &emsp;&emsp;android:text="&#x3579;" /&gt;
+        &emsp;&emsp;android:text="\&#x3579;" /&gt;
