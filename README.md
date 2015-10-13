@@ -14,17 +14,18 @@ TextView替代ImageView，规避使用bitmap，内存上也大大降低了。
 # 如何使用IconFont
     
 * 准备iconfont字体文件ttf，放置于工程assets目录下
+
 * 使用系统原生TextView方式：    
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), "font/iconfont.ttf");     
         TextView tvIcon1 = (TextView)findViewById(R.id.action_icon1);   
         tvIcon1.setTypeface(myTypeface);   
         tvIcon1.setText(Html.fromHtml("\&#x3626;"));  // iconfont编码，参照assets/iconfont.ttf文件
         
-* 使用扩展控件IconFontTextView方式(分为两种):  
+* 使用扩展控件IconFontTextView方式(分为两种):
 
     1.代码：     
         &emsp;&emsp;IconFontTextView tvIcon9 = (IconFontTextView)findViewById(R.id.action_icon9);     
-        &emsp;&emsp;tvIcon9.setText(Html.fromHtml("&#x3579;"));     
+        &emsp;&emsp;tvIcon9.setText(Html.fromHtml("\&#x3579;"));     
         
     2.配置：         
     &lt;com.tmall.iconfont.IconFontTextView    
